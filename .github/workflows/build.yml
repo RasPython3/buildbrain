@@ -62,6 +62,7 @@ jobs:
           mkdir release
           cp ./linux-brain/arch/arm/boot/dts/imx28-pwsh*.dtb release/
           cp ./linux-brain/arch/arm/boot/zImage release/zImage
+          dd if=/dev/zero of=release/dummy bs=16M count=16
           zip -r release.zip release/
       - name: Generate archive name
         id: archive_name
