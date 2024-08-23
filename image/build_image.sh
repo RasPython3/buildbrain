@@ -78,6 +78,7 @@ sudo cp ${REPO}/brainlilo/*.dll "${LILO}/"
 sudo cp ${REPO}/brainlilo/BrainLILO.exe "${LILO}/AppMain_.exe"
 gzip -cd ${REPO}/image/exeopener.exe.gz > ${REPO}/image/exeopener.exe
 sudo cp ${REPO}/image/exeopener.exe "${LILO}/AppMain.exe"
+sudo dd if=/dev/zero of=${WORK}/p1/アプリ/dummy bs=16M count=16
 
 sudo mkdir -p ${WORK}/p1/loader
 sudo cp ${WORK}/lilobin/*.bin ${WORK}/p1/loader/
